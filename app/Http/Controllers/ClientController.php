@@ -32,15 +32,19 @@ class ClientController extends Controller
      */
     public function store(StoreClientRequest $request)
     {
-        return $this->clients->storeClient($request->validated());
+        $this->clients->storeClient($request->validated());
+
+        return redirect('client-list');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Client $client)
+    public function show()
     {
-        //
+        $client = Client::all();
+
+        return view('client-list', ['clients' => $client]);
     }
 
     /**

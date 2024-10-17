@@ -19,5 +19,6 @@ Route::get('/', function () {
 });
 Route::get('client', [ClientController::class, 'index']);
 Route::post('client-store', [ClientController::class, 'store']);
+Route::get('client-list', [ClientController::class, 'show']);
 
 // Route::resource('clients', ClientController::class)->only(['index', 'store', 'show', 'update', 'destroy']);
