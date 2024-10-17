@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\IndexController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,4 +22,5 @@ Route::get('client', [ClientController::class, 'index']);
 Route::post('client-store', [ClientController::class, 'store']);
 Route::get('client-list', [ClientController::class, 'show']);
 
+Route::get('index', [IndexController::class, 'index']);
 // Route::resource('clients', ClientController::class)->only(['index', 'store', 'show', 'update', 'destroy']);
