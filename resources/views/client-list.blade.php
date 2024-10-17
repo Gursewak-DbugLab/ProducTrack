@@ -18,22 +18,27 @@
             <td> Contract End Date </td>
         </tr>
 
-    @foreach($clients as $client)
-<tr>
-    <td> {{ $client->id }} </td>
-    <td> {{ $client->product_name }} </td>
-    <td> {{ $client->client_name }} </td>
-    <td> {{ $client->team_leader_name }} </td>
-    <td> {{ $client->employee_name }} </td>
-    <td> {{ $client->status }} </td>
-    <td> {{ $client->estimated_time }} </td>
-    <td> {{ $client->spent_time }} </td>
-    <td> {{ $client->contract_start_date }} </td>
-    <td> {{ $client->contract_end_date }} </td>
-</tr>
+        @foreach($clients as $client)
+        <tr>
+            <td> {{ $client->id }} </td>
+            <td> {{ $client->product_name }} </td>
+            <td> {{ $client->client_name }} </td>
+            <td> {{ $client->team_leader_name }} </td>
+            <td> {{ $client->employee_name }} </td>
+            <td> {{ $client->status }} </td>
+            <td> {{ $client->estimated_time }} </td>
+            <td> {{ $client->spent_time }} </td>
+            <td> {{ $client->contract_start_date }} </td>
+            <td> {{ $client->contract_end_date }} </td>
+        </tr>
         @endforeach
-        </table>
-
-    </body>
+    </table>
+    <script src="assets/jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            alert(1);
+        });
+    </script>
+</body>
 
 </html>
